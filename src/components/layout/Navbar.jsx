@@ -1,4 +1,5 @@
 import GooeyNav from "./GooeyNav";
+import styles from "./Navbar.module.css";
 
 // update with your own items
 const items = [
@@ -9,7 +10,7 @@ const items = [
 
 function Navbar() {
     return (
-        <div className="Navbar">
+        <div className={styles["Navbar"]}>
             <GooeyNav
                 items={items}
                 particleCount={15}

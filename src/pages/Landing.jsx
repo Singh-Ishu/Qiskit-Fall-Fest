@@ -15,7 +15,7 @@ function Landing() {
         const { scene, camera, renderer } = initSceneRenderer("hero-canvas");
 
         // === Postprocessing Composer ===
-        const composer = initPostprocessing(renderer, scene, camera);
+        const composer = initPostprocessing(renderer, scene, camera, 0.8);
 
         // === Lights ===
         const ambientLight = new THREE.AmbientLight(0xffffff, 1);

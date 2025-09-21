@@ -69,7 +69,7 @@ export function initSceneRenderer(canvasId) {
     return { scene, camera, renderer };
 }
 
-export function initPostprocessing(renderer, scene, camera) {
+export function initPostprocessing(renderer, scene, camera, bloomIntensity) {
     const composer = new POSTPROCESSING.EffectComposer(renderer, {
         frameBufferType: THREE.HalfFloatType,
     });
@@ -77,7 +77,7 @@ export function initPostprocessing(renderer, scene, camera) {
     composer.addPass(new POSTPROCESSING.RenderPass(scene, camera));
 
     const bloom = new POSTPROCESSING.BloomEffect({
-        intensity: 1.2,
+        intensity: bloomIntensity,
         luminanceThreshold: 0.0,
         luminanceSmoothing: 0.9,
     });
