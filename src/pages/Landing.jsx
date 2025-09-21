@@ -29,7 +29,7 @@ function Landing() {
         renderer.outputEncoding = THREE.sRGBEncoding;
         renderer.toneMapping = THREE.ACESFilmicToneMapping;
         renderer.toneMappingExposure = 2.0;
-        renderer.setClearColor(0x000000, 0); // solid black background
+        renderer.setClearColor(0x000000, 0);
 
         // === Postprocessing Composer ===
         const composer = new POSTPROCESSING.EffectComposer(renderer, {
@@ -64,6 +64,22 @@ function Landing() {
         scene.add(torus1);
         scene.add(torus2);
         scene.add(torus3);
+
+        //Event Badge
+        var badge_map = new THREE.TextureLoader().load("src/assets/badge.png");
+        var badge_mat = new THREE.SpriteMaterial({ map: badge_map });
+        var badge_sprite = new THREE.Sprite(badge_mat);
+        badge_sprite.scale.set(5, 5);
+
+        scene.add(badge_sprite);
+
+        //rescaling stuff
+        const t1_sf = 1.3;
+        const t2_sf = 1.3;
+        const t3_sf = 1.3;
+        torus1.scale.set(t1_sf, t1_sf, t1_sf);
+        torus2.scale.set(t2_sf, t2_sf, t2_sf);
+        torus3.scale.set(t3_sf, t3_sf, t3_sf);
 
         // === Animation Loop ===
         let time = 0;
@@ -100,11 +116,11 @@ function Landing() {
                     </span>
                 </div>
                 <div className={styles["event-logo"]}>
-                    <img
+                    {/* <img
                         src="src/assets/badge.png"
                         alt="Event Logo"
                         className={styles["event-logo-img"]}
-                    />
+                    /> */}
                 </div>
                 <div className={styles["event-date"]}>
                     October
