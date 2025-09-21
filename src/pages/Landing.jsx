@@ -82,18 +82,22 @@ function Landing() {
         <div className={styles.Landing}>
             <div className={styles["text-container"]}>
                 <div className={styles["event-name"]}>
-                    IBM Qiskit{" "}
-                    <span className={styles["landing-gradient-text"]}>
-                        FallFest 2025
-                    </span>
+                    <b>
+                        IBM Qiskit{" "}
+                        <span className={styles["landing-gradient-text"]}>
+                            FallFest 2025
+                        </span>
+                    </b>
                 </div>
                 <div className={styles["event-logo"]}></div>
                 <div className={styles["event-date"]}>
-                    October
-                    <br />
-                    <span className={styles["landing-gradient-text"]}>
-                        29<sup>th</sup>-31<sup>st</sup>
-                    </span>
+                    <b>
+                        October
+                        <br />
+                        <span className={styles["landing-gradient-text"]}>
+                            29<sup>th</sup>-31<sup>st</sup>
+                        </span>
+                    </b>
                 </div>
             </div>
             <canvas id="hero-canvas" className={styles["hero-canvas"]} />
