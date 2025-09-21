@@ -94,7 +94,7 @@ function Landing() {
                     <b>
                         October
                         <br />
-                        <span className={styles["landing-gradient-text"]}>
+                        <span className={styles["landing-gradient-text-2"]}>
                             29<sup>th</sup>-31<sup>st</sup>
                         </span>
                     </b>
