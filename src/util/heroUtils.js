@@ -13,7 +13,7 @@ function createBox(width, height, depth, color) {
     return box;
 }
 function createTorus(
-    color,
+    color = 0xffffff,
     radius = 1,
     tube = 0.4,
     radialSegments = 12,
@@ -25,10 +25,16 @@ function createTorus(
         radialSegments,
         tubularSegments
     );
-    const material = new THREE.MeshBasicMaterial({ color: color });
-    const torus = new THREE.Mesh(geometry, material);
-    return torus;
+
+    const material = new THREE.MeshStandardMaterial({
+        color: new THREE.Color(color),
+        emissive: new THREE.Color(1, 1, 1),
+        emissiveIntensity: 1,
+    });
+
+    return new THREE.Mesh(geometry, material);
 }
+
 function handleResize(camera, renderer) {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
