@@ -36,6 +36,7 @@
 .event-date,
 .event-logo {
     height: 100vh;
+    width: 33%;
 
     display: flex;
     flex-wrap: wrap;
