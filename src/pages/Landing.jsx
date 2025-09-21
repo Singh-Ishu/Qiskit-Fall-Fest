@@ -15,7 +15,7 @@ function Landing() {
         const { scene, camera, renderer } = initSceneRenderer("hero-canvas");
 
         // === Postprocessing Composer ===
-        const composer = initPostprocessing(renderer, scene, camera, 0.8);
+        const composer = initPostprocessing(renderer, scene, camera, 6);
 
         // === Lights ===
         const ambientLight = new THREE.AmbientLight(0xffffff, 1);
@@ -26,9 +26,9 @@ function Landing() {
         scene.add(pointLight);
 
         // === Toruses ===
-        const torus1 = createTorus(0xffffff, 3.5, 0.15, 16, 100);
-        const torus2 = createTorus(0xffffff, 2.8, 0.15, 16, 100);
-        const torus3 = createTorus(0xffffff, 2.1, 0.15, 16, 100);
+        const torus1 = createTorus(0xffffff, 3.5, 0.005, 16, 100);
+        const torus2 = createTorus(0xffffff, 2.8, 0.005, 16, 100);
+        const torus3 = createTorus(0xffffff, 2.1, 0.005, 16, 100);
 
         torus1.rotation.x = Math.PI / 2;
         torus2.rotation.y = Math.PI / 2;
