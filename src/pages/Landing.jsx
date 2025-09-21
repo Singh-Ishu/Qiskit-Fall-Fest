@@ -61,6 +61,10 @@ function Landing() {
         torus2.rotation.y = Math.PI / 2;
         torus3.rotation.z = Math.PI / 2;
 
+        torus1.position.y -= 1;
+        torus2.position.y -= 1;
+        torus3.position.y -= 1;
+
         scene.add(torus1);
         scene.add(torus2);
         scene.add(torus3);
@@ -70,6 +74,7 @@ function Landing() {
         var badge_mat = new THREE.SpriteMaterial({ map: badge_map });
         var badge_sprite = new THREE.Sprite(badge_mat);
         badge_sprite.scale.set(5, 5);
+        badge_sprite.position.y -= 1;
 
         scene.add(badge_sprite);
 
