@@ -32,8 +32,9 @@
     height: 100vh;
 }
 
-#event-name,
-#event-date {
+.event-name,
+.event-date,
+.event-logo {
     height: 100vh;
 
     display: flex;
@@ -43,4 +44,8 @@
     align-items: center;
     justify-content: center;
     justify-items: center;
+}
+
+.event-logo-img {
+    height: 25%;
 }
