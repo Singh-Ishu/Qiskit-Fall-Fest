@@ -5,3 +5,10 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.Navbar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
