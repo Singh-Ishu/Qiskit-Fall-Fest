@@ -1,0 +1,46 @@
+.Landing {
+    font-size: 3rem;
+    color: white;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.landing-gradient-text {
+    display: block;
+
+    background: linear-gradient(
+        89deg,
+        rgba(49, 152, 212, 1) 0%,
+        rgba(177, 49, 212, 1) 50%,
+        rgba(237, 83, 234, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-canvas {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+#event-name,
+#event-date {
+    height: 100vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}

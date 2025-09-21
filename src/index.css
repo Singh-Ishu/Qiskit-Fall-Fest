@@ -1,0 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    --font-colour: #ffffff;
+    --bg-colour: #580085;
+    --accent-colour: #8f00d7;
+}
