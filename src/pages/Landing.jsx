@@ -15,20 +15,20 @@ function Landing() {
         const { scene, camera, renderer } = initSceneRenderer("hero-canvas");
 
         // === Postprocessing Composer ===
-        const composer = initPostprocessing(renderer, scene, camera, 6);
+        const composer = initPostprocessing(renderer, scene, camera, 5);
 
         // === Lights ===
-        const ambientLight = new THREE.AmbientLight(0xffffff, 1);
-        scene.add(ambientLight);
+        // const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+        // scene.add(ambientLight);
 
-        const pointLight = new THREE.PointLight(0xffffff, 50, 100);
-        pointLight.position.set(10, 10, 10);
-        scene.add(pointLight);
+        // const pointLight = new THREE.PointLight(0xffffff, 50, 100);
+        // pointLight.position.set(10, 10, 10);
+        // scene.add(pointLight);
 
         // === Toruses ===
-        const torus1 = createTorus(0xffffff, 3.5, 0.005, 16, 100);
-        const torus2 = createTorus(0xffffff, 2.8, 0.005, 16, 100);
-        const torus3 = createTorus(0xffffff, 2.1, 0.005, 16, 100);
+        const torus1 = createTorus(0xffffff, 3.5, 0.005, 16, 100, 0xffffff);
+        const torus2 = createTorus(0xffffff, 2.8, 0.005, 16, 100, 0xbc13fe);
+        const torus3 = createTorus(0xffffff, 2.1, 0.05, 16, 100, 0xbc13fe);
 
         torus1.rotation.x = Math.PI / 2;
         torus2.rotation.y = Math.PI / 2;
@@ -66,6 +66,8 @@ function Landing() {
             torus2.rotation.x -= 0.02;
             torus2.rotation.y += 0.03;
             torus3.rotation.x += Math.sin(time) * 0.1;
+            torus3.rotation.y += Math.sin(time) * 0.1;
+            torus3.rotation.z += Math.sin(time) * 0.1;
 
             composer.render();
         };

@@ -18,7 +18,8 @@ function createTorus(
     radius = 1,
     tube = 0.4,
     radialSegments = 12,
-    tubularSegments = 24
+    tubularSegments = 24,
+    emissiveColor = 0xffffff
 ) {
     const geometry = new THREE.TorusGeometry(
         radius,
@@ -29,7 +30,7 @@ function createTorus(
 
     const material = new THREE.MeshStandardMaterial({
         color: new THREE.Color(color),
-        emissive: new THREE.Color(1, 1, 1),
+        emissive: new THREE.Color(emissiveColor),
         emissiveIntensity: 1,
     });
 
