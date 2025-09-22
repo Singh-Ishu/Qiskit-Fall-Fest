@@ -5,6 +5,7 @@ import styles from "./Navbar.module.css";
 const items = [
     { label: "Home", href: "#" },
     { label: "About", href: "#" },
+    { label: "Gallery", href: "#" },
     { label: "Contact", href: "#" },
 ];
 
