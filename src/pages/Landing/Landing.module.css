@@ -59,6 +59,12 @@
     justify-content: center;
     justify-items: center;
 }
+.event-name {
+    text-align: left;
+}
+.event-date {
+    text-align: right;
+}
 
 .event-logo-img {
     height: 25%;

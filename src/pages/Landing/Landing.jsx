@@ -7,7 +7,7 @@ import {
     handleResize,
     initSceneRenderer,
     initPostprocessing,
-} from "../util/heroUtils";
+} from "../../util/heroUtils";
 
 function Landing() {
     useEffect(() => {
