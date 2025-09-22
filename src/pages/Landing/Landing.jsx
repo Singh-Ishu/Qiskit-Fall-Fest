@@ -28,7 +28,7 @@ function Landing() {
         // === Toruses ===
         const torus1 = createTorus(0xffffff, 3.5, 0.005, 16, 100, 0xffffff);
         const torus2 = createTorus(0xffffff, 2.8, 0.005, 16, 100, 0xbc13fe);
-        const torus3 = createTorus(0xffffff, 2.1, 0.05, 16, 100, 0xbc13fe);
+        const torus3 = createTorus(0xffffff, 2.1, 0.01, 16, 100, 0xffffff);
 
         torus1.rotation.x = Math.PI / 2;
         torus2.rotation.y = Math.PI / 2;

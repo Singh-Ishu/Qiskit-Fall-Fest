@@ -3,6 +3,7 @@
     color: white;
     position: relative;
     z-index: 50;
+    backdrop-filter: blur(10px);
 }
 
 .text-container {
@@ -23,6 +24,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    backdrop-filter: blur(5px);
 }
 .landing-gradient-text-2 {
     display: block;
@@ -36,6 +38,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    backdrop-filter: blur(5px);
 }
 
 .hero-canvas {
