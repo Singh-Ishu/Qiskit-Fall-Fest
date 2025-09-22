@@ -8,6 +8,7 @@ import {
     initSceneRenderer,
     initPostprocessing,
 } from "../../util/heroUtils";
+import { int } from "three/tsl";
 
 function Landing() {
     useEffect(() => {
@@ -55,6 +56,16 @@ function Landing() {
         badgeSprite.position.y -= 1;
         scene.add(badgeSprite);
 
+        //Interactions set up
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+
+        function onMouseMove(event) {
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        }
+        window.addEventListener("mousemove", onMouseMove, false);
+
         // === Animation Loop ===
         let time = 0;
         const animate = () => {
@@ -68,6 +79,33 @@ function Landing() {
             torus3.rotation.x += Math.sin(time) * 0.1;
             torus3.rotation.y += Math.sin(time) * 0.1;
             torus3.rotation.z += Math.sin(time) * 0.1;
+
+            //Interactions
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(scene.children, true);
+
+            // Target scale based on intersection
+            const targetScale = intersects.length > 0 ? 2 : scaleFactor;
+
+            // Smoothly interpolate scale
+            const lerp = (start, end, t) => start + (end - start) * t;
+            const smoothing = 0.1;
+
+            torus1.scale.set(
+                lerp(torus1.scale.x, targetScale, smoothing),
+                lerp(torus1.scale.y, targetScale, smoothing),
+                lerp(torus1.scale.z, targetScale, smoothing)
+            );
+            torus2.scale.set(
+                lerp(torus2.scale.x, targetScale, smoothing),
+                lerp(torus2.scale.y, targetScale, smoothing),
+                lerp(torus2.scale.z, targetScale, smoothing)
+            );
+            torus3.scale.set(
+                lerp(torus3.scale.x, targetScale, smoothing),
+                lerp(torus3.scale.y, targetScale, smoothing),
+                lerp(torus3.scale.z, targetScale, smoothing)
+            );
 
             composer.render();
         };
