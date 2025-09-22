@@ -8,6 +8,7 @@ DotGrid (src/components/shared/DotGrid/DotGrid.css)
 
 Landing (src/pages/Landing/Landing.module.css)
 - .hero-canvas: 2
+- .Landing: 50
 
 Navbar (src/components/layout/Navbar.module.css)
 - .Navbar: 100

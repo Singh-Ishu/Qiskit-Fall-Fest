@@ -1,6 +1,8 @@
 .Landing {
     font-size: 3rem;
     color: white;
+    position: relative;
+    z-index: 50;
 }
 
 .text-container {

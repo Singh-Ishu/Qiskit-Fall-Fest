@@ -6,7 +6,7 @@ function Background() {
         <div className={styles["Background"]}>
             <DotGrid
                 dotSize={1}
-                gap={15}
+                gap={2}
                 baseColor="#5227FF"
                 activeColor="#5227FF"
                 proximity={120}
