@@ -1,0 +1,22 @@
+Z-Index Map (only selectors with explicit z-index)
+
+Background (src/pages/Background/Background.module.css)
+- .Background: -1
+
+DotGrid (src/components/shared/DotGrid/DotGrid.css)
+- .dot-grid: 0
+
+Landing (src/pages/Landing/Landing.module.css)
+- .hero-canvas: 2
+
+Navbar (src/components/layout/Navbar.module.css)
+- .Navbar: 100
+
+GooeyNav (src/components/layout/GooeyNav.css)
+- .gooey-nav-container: 9999
+- .gooey-nav-container nav ul: 10000
+- .gooey-nav-container nav ul li a: 1
+- .gooey-nav-container nav ul li::after: -1
+- .gooey-nav-container .effect: 999
+- .gooey-nav-container .effect.filter::before: -2
+- .gooey-nav-container .effect.filter::after: -1
