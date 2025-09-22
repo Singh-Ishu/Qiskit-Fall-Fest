@@ -11,3 +11,7 @@
     --bg-colour: #580085;
     --accent-colour: #8f00d7;
 }
+
+body {
+    background-color: black;
+}

@@ -1,8 +1,9 @@
 .App {
     width: 100vw;
     height: 100vh;
-    /* background-image: url("./assets/bg.png"); */
     background-color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+.Dome-Container {
+    backdrop-filter: blur(5px);
 }
